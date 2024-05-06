@@ -1,25 +1,27 @@
 import React from "react";
 import { TextInput } from 'react-native-paper';
+import parametriceText from "../../../parametrice/en";
 
 type InputProps = {
     label?: string;
-
+    onChange: (text: string) => void;
+    value?: string;
 };
 const Input: React.FC<InputProps> = (props) => {
-    const [text, setText] = React.useState("");
+    const { value, onChange } = props;
 
     return (
         <TextInput
             label={props.label}
-            value={text}
-            right={text ? <TextInput.Icon icon="delete" onPress={() => setText("")} /> : undefined} 
-            onChangeText={text => setText(text)}
+            value={value}
+            right={value ? <TextInput.Icon icon="close" onPress={() => onChange("")} /> : null}
+            onChangeText={text => onChange(text)}
         />
     )
 };
 
 Input.defaultProps = {
-    label: "user"
+    label: parametriceText.user
 }
 
 export default Input;

@@ -1,16 +1,13 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import RootStack from './router';
 
+const StackNavigate: React.FC = () => {
+  return (
+    <NavigationContainer>
+      <RootStack />
+    </NavigationContainer>
+  );
+};
 
-
-const StackNavigate:React.FC = () => {
-    return (
-      <NavigationContainer>
-        <RootStack />
-      </NavigationContainer>
-    );
-  }
-
-
-  export default StackNavigate;
+export default StackNavigate;

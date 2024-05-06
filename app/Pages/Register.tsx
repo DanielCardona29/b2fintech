@@ -1,14 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import {View} from 'react-native';
 import RegisterSqueleton from '../Components/components/register';
+import styles from './styles/register';
 
 const Register = () => {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <RegisterSqueleton />
-      </View>
-    );
-  }
-  
+  return (
+    <View style={styles.container}>
+      <RegisterSqueleton />
+    </View>
+  );
+};
 
-  export default Register;
+export default Register;

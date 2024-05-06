@@ -1,6 +1,6 @@
 import * as React from 'react';
 import StackNavigate from './app/navigation/Stack';
-import { MD3LightTheme as DefaultTheme, PaperProvider } from 'react-native-paper';
+import {MD3LightTheme as DefaultTheme, PaperProvider} from 'react-native-paper';
 import UserProvider from './app/Components/hooks/user';
 const theme = {
   ...DefaultTheme,
@@ -10,7 +10,6 @@ const theme = {
     secondary: '#31294f',
   },
 };
-
 
 export default function App() {
   return (

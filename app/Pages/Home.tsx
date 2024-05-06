@@ -6,7 +6,7 @@ import parametriceText from '../parametrice/en';
 import styles from './styles/home';
 import { UserContext } from '../Components/hooks/user';
 
-const Home = () => {
+const Home = ({navigation}:any) => {
   const userContext = useContext(UserContext);
   const { userLoged } = userContext;
 
@@ -18,7 +18,7 @@ const Home = () => {
           <Icon name="user" size={30} color="white" />
         </View>
         <Text style={styles.containedtext}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dignissimos totam perferendis assumenda. Necessitatibus quisquam, itaque maxime enim rerum facere quam exercitationem aut dolor, sequi sed voluptatem possimus omnis dolorem.</Text>
-        <Button icon="arrow-right" mode="text" textColor='white' onPress={() => false} contentStyle={styles.buttonContent}>{parametriceText.start}</Button>
+        <Button icon="arrow-right" mode="text" textColor='white' onPress={() => navigation.navigate("Login")} contentStyle={styles.buttonContent}>{parametriceText.start}</Button>
       </View>
     )
   }
